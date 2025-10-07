@@ -1,3 +1,0 @@
-# FLLAZ
-https://fllaz.site/
-
