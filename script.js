@@ -219,12 +219,12 @@ async function sendMessage(token, channelId, message, options = {}) {
     }
     
     if (options.allmention) {
-        payload.content = '@everyone\n' + payload.content;
+        payload.content = payload.content　+ '\n@everyone';
     }
     
     if (options.randomMentions) {
         const randomMention = options.randomMentions[Math.floor(Math.random() * options.randomMentions.length)];
-        payload.content = '<@' + randomMention + '>\n' + payload.content;
+        payload.content = payload.content + '\n<@' + randomMention + '>';
     }
     
     if (options.pollTitle && options.pollAnswers) {
